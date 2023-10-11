@@ -1,0 +1,205 @@
+:root{
+	--white-text:#fff;
+	--background:#1f5c6d;
+	--black-text:rgb(68, 66, 66)	
+	--prueba: (180deg,#21c8f6,#637bff);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+	border: none;
+	
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;	
+	overflow: hidden;  /*para que sea estatita y no se mueva para arriba y abajo*/
+	background:#234149;
+}
+.nave{
+	background-color: #4a1818;
+	/* border-radius: 0.5rem;borde de la caja */
+}
+/*aqui empieza las cajas de los eventos*/
+.container{
+	display: flex;
+	justify-content: left;
+	height: 100vh;
+    align-items: center;
+	
+}
+
+.card {
+	background-color:var(--black-text);
+	border-radius: 1.5rem;/*borde de la caja*/
+	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+	display: flex;	
+	margin: 0.5rem;
+	overflow: hidden;
+	width: 23rem;/*ancho*/
+	height: 12rem;/*largo*/
+	background: white;
+}
+
+.card-img-top{
+	width: 11rem;
+}
+.card-body{
+	margin-left: 11rem;
+	margin-top: -9rem;
+}
+/*aqui acaba la caja de los eventos*/
+
+/*aqui viene el logo de la iglesia*/
+.contenido{
+	display: flex;
+	justify-content: right;
+	margin-top: -38rem;
+	margin-right: 0rem;
+    align-items: center;
+}
+.cajalogo {
+	background-color:var(--black-text);
+	border-radius: 1.5rem;/*borde de la caja*/
+	/* box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);para darle el efecto de sombra a la caja */
+	display: flex;	
+	margin: 0.5rem;
+	overflow: hidden;
+	width: 23rem;/*ancho*/
+	height: 28rem;/*largo*/
+}
+.boton-con-imagen img{
+	width: 20rem; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: 20rem; /* Ajusta la altura de la imagen según tus necesidades */
+    margin-right: 5px; /* Espacio entre la imagen y el texto (o*/
+}
+/*aqui acaba*/
+/*aqui viene la vista de registro*/
+.contenid{
+	display: flex;
+	justify-content: left;
+	margin-top: 8rem;
+	margin-right: 0rem;
+    align-items: center;
+}
+.title{
+	margin-top: 2rem;
+	margin-left: 4rem;
+}
+
+.cajita{
+	background-color:var(--black-text);
+	border-radius: 3.5rem;/*borde de la caja*/
+	box-shadow: 0 0.5rem 2rem  rgba(23, 201, 255, 0.8);
+	display: flex;	
+	margin: 2rem;
+	overflow: hidden;
+	margin-top: -4rem;
+	width: 55rem;/*ancho*/
+	height: 36rem;/*largo*/
+	background: white;
+}
+.cajas{/*ESTA ES LA CAJA DONDE SE VEN LOS DATOS REGISTRADOS*/
+	margin-top: 5rem;
+	margin-left: -21rem;
+	display: flex;
+	overflow: hidden;
+	border-radius: 0rem;/*borde de la caja*/
+	/*para ver el margen que abarca el cuadro*/
+	/* box-shadow: 0 0.5rem 2rem  rgba(0, 0, 0, 0.8); */
+	width: 44rem;/*ancho*/
+	height: 24rem;/*largo*/
+	overflow: scroll;
+}
+/*aqui viene las celulas*/
+.conteinercelu{
+	display: flex;
+	justify-content: left;
+	margin-top: 8rem;
+	margin-right: 0rem;
+    align-items: center;
+	
+}
+.titucelu{
+	margin-top: 2rem;
+	margin-left: 4rem;
+}
+.cajacelu{
+	background-color:var(--black-text);
+	border-radius: 3.5rem;/*borde de la caja*/
+	box-shadow: 0 0.5rem 2rem  rgba(23, 201, 255, 0.8);
+	background: white;
+	display: flex;	
+	margin: 2rem;
+	overflow: hidden;
+	margin-top: -4rem;
+	width: 55rem;/*ancho*/
+	height: 36rem;/*largo*/
+}
+.col-xl-10{
+	margin-left: 1rem;
+	margin-top: 3rem;
+}
+.col-auto{
+	margin-left: 16rem;
+	margin-top: -2.4rem;
+}
+.button{
+   margin-left: 22rem;
+   margin-top: -2.4rem;
+}
+.cajascelu{/*ESTA ES LA CAJA DONDE SE VEN LOS DATOS REGISTRADOS*/
+	margin-top: 6rem;
+	margin-left: -63rem;
+	display: flex;
+	overflow: hidden;
+	border-radius: 0rem;/*borde de la caja*/
+	/*para ver el margen que abarca el cuadro*/
+	/* box-shadow: 0 0.5rem 2rem  rgba(0, 0, 0, 0.8);  */
+	width: 44rem;/*ancho*/
+	height: 24rem;/*largo*/
+	overflow: scroll;
+}
+.botonagre{/*aqui va el boton de agregar datos*/
+	margin-top: 30rem;
+	margin-left: -8rem;
+}
+/*aqui viene los bautizados*/
+.contenidobau{
+	display: flex;
+	justify-content: left;
+	margin-top: 8rem;
+	margin-right: 0rem;
+    align-items: center;
+}
+.titlebau{
+	margin-top: 2rem;
+	margin-left: 4rem;
+}
+.cajitabau{
+	background-color:var(--black-text);
+	border-radius: 3.5rem;/*borde de la caja*/
+	box-shadow: 0 0.5rem 2rem  rgba(23, 201, 255, 0.8);
+	display: flex;	
+	margin: 2rem;
+	overflow: hidden;
+	margin-top: -4rem;
+	width: 55rem;/*ancho*/
+	height: 36rem;/*largo*/
+	background: white;
+}
+.cajabau{/*ESTA ES LA CAJA DONDE SE VEN LOS DATOS REGISTRADOS*/
+	margin-top: 5rem;
+	margin-left: -26rem;
+	display: flex;
+	overflow: hidden;
+	border-radius: 0rem;/*borde de la caja*/
+	/*para ver el margen que abarca el cuadro*/
+	/* box-shadow: 0 0.5rem 2rem  rgba(0, 0, 0, 0.8); */
+	width: 44rem;/*ancho*/
+	height: 24rem;/*largo*/
+	overflow: scroll;
+}
