@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class celulas extends Model
+class encuentros extends Model
 {
     use HasFactory;
-    
-    public function miembros()
+    public function lideres()
     {
-        return $this->hasMany(miembro::class,'id');
+        return $this->hasMany(lideres::class,'id');
     }
+
 }

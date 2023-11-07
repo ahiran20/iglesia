@@ -15,7 +15,11 @@ class CreateBautizosTable extends Migration
     {
         Schema::create('bautizos', function (Blueprint $table) {
             $table->id();
-            $table ->date('fecha_de_bautizo');
+            $table->foreignId('id_miembro')->nullable()->constrained('miembros');
+            $table->integer('ci');
+            $table->string('encargado_del_bautizo');
+            $table->string('testigo');
+            $table->date('fecha_de_bautizo');
             $table->timestamps();
         });
     }

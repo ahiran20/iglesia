@@ -1,5 +1,5 @@
 @extends('layout.plantilla')<!-- llamar a la plantilla orginal donde esta todos los formatos-->
-@section('titulo','Registro de Bautizo')<!--seccion de titulo igual de la plantilla original -->
+@section('titulo','Iglesia Bethel')<!--seccion de titulo igual de la plantilla original -->
 @section('contenido')<!-- seccion de contenido aqui tiene que ir dentro todo-->
         <div class=" nave">
             <ul class="nav justify-content-center">
@@ -28,40 +28,35 @@
               <div class="cajabau">
                 <table class="table table-sm table-bordered">
                   <thead>
-                      <th>N°</th>
-                      <th>NOMBRE</th>
-                      <th>APELLIDO PATERNO</th>
-                      <th>APELLIDO MATERNO</th>
-                      <th>GENERO</th>
-                      <th>CI</th>
-                      <th>POR QUIEN FUE BAUTIZADO</th>
-                      <th>TESTIGO</th>
-                      <th>FECHA DE BAUTIZO</th>
+                    <th>id</th>
+                      <th>nombre</th>
+                      <th>apellido</th>
+                      <th>apellido</th>
+                      <th>n° celula </th>
+                      <th>lider</th>
+                      
                   </thead>
                   <tbody>
-                    @foreach ($bautizo as $item)
                         <tr>
-                          <td>{{$item->id}}</td>
-                          <td>{{$item->miembros->nombre}}</td>
-                          <td>{{$item->miembros->apellido_paterno}}</td>
-                          <td>{{$item->miembros->apellido_materno}}</td>
-                          <td>{{$item->miembros->genero}}</td>
-                          <td>{{$item->ci}}</td>
-                          <td>{{$item->encargado_del_bautizo}}</td>
-                          <td>{{$item->testigo}}</td>
-                          <td>{{$item->fecha_de_bautizo}}</td>
+                          <td>{{$informe->lider_celu}}</td>
+                          <td>{{$informe->asistente}}</td>
+                          {{-- <td>{{$informe->miembros->nombre}}</td>
+                          <td>{{$informe->miembros->apellido_paterno}}</td>
+                          
+                          {{-- <td>{{$item->nombre}}</td>
+                          <td>{{$item->apellido_paterno}}</td>
+                          <td>{{$item->celula->id}}</td>
+                          <td>{{$item->celula->lider_celu}}</td> --}}
+                          <td></td>
+                          <td>{{$informe->nombre}}</td>
+                          <td>{{$informe->apellido_paterno}}</td>
+                          <td>{{$informe->apellido_materno}}</td>
                         </tr>
-                    @endforeach
                   </tbody>
                 </table>
               </div>
               <div class="botonagre"><!--va en la la parte de celula su estilo-->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Agregar</button>
-              </div>
-              <div class="pddf2">
-                <form action="{{route('pdfcelu')}}" method="GET">
-                  <input type="submit" class="btn btn-primary" value="Pdf">
-                </form>
               </div>
             </div>
         </div>
@@ -74,7 +69,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="{{ route('bautizo.store') }}" method="POST">
+            <form action="" method="POST">
               @csrf
               <label for="">N° Identificativo del Miembro</label>
               <input type="text" name="id_miembro" class="form-control" required>

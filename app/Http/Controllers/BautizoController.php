@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\bautizo;
 use Illuminate\Http\Request;
+use App\Http\Controllers\MiembroController;
+
+use function PHPUnit\Framework\returnSelf;
 
 class BautizoController extends Controller
 {
@@ -14,7 +17,8 @@ class BautizoController extends Controller
      */
     public function index()
     {
-        //
+        $bautizo = bautizo::all();
+        return view('bautizados',compact('bautizo'));
     }
 
     /**
@@ -24,11 +28,8 @@ class BautizoController extends Controller
      */
     public function create(Request $request)
     {
-        //
-        $bautizo = new bautizo();
-        $bautizo->fecha_de_bautizo = $request->post('fecha_de_bautizo');
-        $bautizo->save();
-        return redirect()->route("miembro.index");
+        
+          
     }
 
     /**
@@ -39,7 +40,14 @@ class BautizoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $bautizo = new bautizo();
+        $bautizo->id_miembro =$request->id_miembro;
+        $bautizo->ci = $request->post('ci');
+        $bautizo->encargado_del_bautizo = $request->post('encargado_del_bautizo');
+        $bautizo->testigo = $request->post('testigo');
+        $bautizo->fecha_de_bautizo = $request->post('fecha_de_bautizo');
+        $bautizo->save();
+        return redirect()->route("bautizo.index");    
     }
 
     /**

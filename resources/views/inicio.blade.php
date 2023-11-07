@@ -10,10 +10,13 @@
         <a class="nav-link" href="{{url('registrocelulao')}}">CELULAS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">BAUTIZADOS</a>
+        <a class="nav-link" href="{{url('bautizados')}}">BAUTIZADOS</a>
+      </li>
+      <li>
+        <a class="nav-link" href="{{url('encuentro')}}">ENCUENTRO</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">ESCUELA DE LIDERES</a>
+        <a class="nav-link" href="{{url('escuela')}}">ESCUELA DE LIDERES</a>
       </li>
     </ul>
   </div>
@@ -23,14 +26,14 @@
                 <img src="miembros.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Miembros</h5>
-                  <p class="card-text">aqui vendra los mienbros totales segun base de datos</p>
+                  <p class="card-text">2</p>
                 </div>
             </div>
             <div class="card"><!--eventos-->
-                <img src="evento.png" class="card-img-top" alt="...">
+                <img src="bautizo.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 class="card-title">Eventos</h5>
-                <p class="card-text">libre vacio</p>
+                <h5 class="card-title">Bautizados</h5>
+                <p class="card-text">1</p>
                 </div>
             </div>
             <div class="card"><!--celulas-->
@@ -44,7 +47,7 @@
                 <img src="finanza.png" class="card-img-top" alt="...">
                 <div class="card-body">
                 <h5 class="card-title">Finanzas</h5>
-                <p class="card-text">libre vacio</p>
+                <p class="card-text">Pronto</p>
                 </div>
             </div>
         </div>

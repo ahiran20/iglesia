@@ -1,9 +1,9 @@
-:root{
+/* :root{
 	--white-text:#fff;
 	--background:#1f5c6d;
 	--black-text:rgb(68, 66, 66)	
 	--prueba: (180deg,#21c8f6,#637bff);
-}
+} */
 
 * {
 	padding: 0;
@@ -16,12 +16,11 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;	
-	overflow: hidden;  /*para que sea estatita y no se mueva para arriba y abajo*/
+	  /*para que sea estatita y no se mueva para arriba y abajo*/
 	background:#234149;
 }
 .nave{
 	background-color: #4a1818;
-	/* border-radius: 0.5rem;borde de la caja */
 }
 /*aqui empieza las cajas de los eventos*/
 .container{
@@ -77,7 +76,35 @@ body {
     margin-right: 5px; /* Espacio entre la imagen y el texto (o*/
 }
 /*aqui acaba*/
-/*aqui viene la vista de registro*/
+
+/*aqui viene el logo de la iglesia en miembros*/
+.contenido1{
+	display: flex;
+	justify-content: right;
+	margin-top: -35rem;
+	margin-right: 2rem;
+    align-items: center;
+}
+.cajalogo1{
+	background-color:var(--black-text);
+	border-radius: 1.5rem;/*borde de la caja*/
+	/*box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);/*para darle el efecto de sombra a la caja */
+	display: flex;	
+	margin: 0.5rem;
+	overflow: hidden;
+	width: 15rem;/*ancho*/
+	height: 20rem;/*largo*/
+}
+.boton-con-imagen img{
+	width: 15rem; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: 15rem; /* Ajusta la altura de la imagen según tus necesidades */
+    margin-right: 4px; /* Espacio entre la imagen y el texto (o*/
+}
+/*aqui acaba*/
+
+
+
+/*aqui viene la vista de miembro*/
 .contenid{
 	display: flex;
 	justify-content: left;
@@ -98,22 +125,40 @@ body {
 	margin: 2rem;
 	overflow: hidden;
 	margin-top: -4rem;
-	width: 55rem;/*ancho*/
+	width: 57rem;/*ancho*/
 	height: 36rem;/*largo*/
 	background: white;
 }
+.col-xl-11{
+	margin-left: 4rem;
+	margin-top: 3rem;
+}
+.auto{
+	margin-left: 19rem;
+	margin-top: -2.4rem;
+}
+.boton{
+   margin-left: 25rem;
+   margin-top: -2.4rem;
+}
 .cajas{/*ESTA ES LA CAJA DONDE SE VEN LOS DATOS REGISTRADOS*/
-	margin-top: 5rem;
-	margin-left: -21rem;
+	margin-top: 7rem;
+	margin-left: -72rem;
 	display: flex;
 	overflow: hidden;
 	border-radius: 0rem;/*borde de la caja*/
 	/*para ver el margen que abarca el cuadro*/
 	/* box-shadow: 0 0.5rem 2rem  rgba(0, 0, 0, 0.8); */
-	width: 44rem;/*ancho*/
+	width: 49rem;/*ancho*/
 	height: 24rem;/*largo*/
 	overflow: scroll;
 }
+.pddf1{/*aqui es el pdf*/
+	margin-top: 32rem;
+	margin-left: -10rem;
+}
+
+
 /*aqui viene las celulas*/
 .conteinercelu{
 	display: flex;
@@ -164,9 +209,40 @@ body {
 	overflow: scroll;
 }
 .botonagre{/*aqui va el boton de agregar datos*/
-	margin-top: 30rem;
+	margin-top: 32rem;
 	margin-left: -8rem;
 }
+.pddf{/*aqui es el pdf*/
+	margin-top: 32rem;
+	margin-left: -10rem;
+}
+/*aqui viene el logo de la iglesia en celula*/
+.contenido2{
+	display: flex;
+	justify-content: right;
+	margin-top: -35rem;
+	margin-right: 2rem;
+    align-items: center;
+}
+.cajalogo2{
+	background-color:var(--black-text);
+	border-radius: 1.5rem;/*borde de la caja*/
+	/*box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);/*para darle el efecto de sombra a la caja */
+	display: flex;	
+	margin: 0.5rem;
+	overflow: hidden;
+	width: 18rem;/*ancho*/
+	height: 23rem;/*largo*/
+}
+.boton-con-imagen img{
+	width: 15rem; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: 15rem; /* Ajusta la altura de la imagen según tus necesidades */
+    margin-right: 4px; /* Espacio entre la imagen y el texto (o*/
+}
+/*aqui acaba*/
+
+
+
 /*aqui viene los bautizados*/
 .contenidobau{
 	display: flex;
@@ -193,13 +269,206 @@ body {
 }
 .cajabau{/*ESTA ES LA CAJA DONDE SE VEN LOS DATOS REGISTRADOS*/
 	margin-top: 5rem;
-	margin-left: -26rem;
+	margin-left: -16.5rem;
 	display: flex;
 	overflow: hidden;
 	border-radius: 0rem;/*borde de la caja*/
 	/*para ver el margen que abarca el cuadro*/
 	/* box-shadow: 0 0.5rem 2rem  rgba(0, 0, 0, 0.8); */
-	width: 44rem;/*ancho*/
+	width: 50rem;/*ancho*/
 	height: 24rem;/*largo*/
 	overflow: scroll;
+}
+.pddf2{/*aqui es el pdf*/
+	margin-top: 32rem;
+	margin-left: -10rem;
+}
+/*aqui viene el logo de la iglesia en bautizados*/
+.contenido3{
+	display: flex;
+	justify-content: right;
+	margin-top: -35rem;
+	margin-right: 2rem;
+    align-items: center;
+}
+.cajalogo3{
+	background-color:var(--black-text);
+	border-radius: 1.5rem;/*borde de la caja*/
+	/*box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);/*para darle el efecto de sombra a la caja */
+	display: flex;	
+	margin: 0.5rem;
+	overflow: hidden;
+	width: 18rem;/*ancho*/
+	height: 23rem;/*largo*/
+}
+.boton-con-imagen img{
+	width: 15rem; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: 15rem; /* Ajusta la altura de la imagen según tus necesidades */
+    margin-right: 4px; /* Espacio entre la imagen y el texto (o*/
+}
+/*aqui acaba*/
+
+/*aqui viene la escuela de lideres*/
+.conteiner_escu{
+	display: flex;
+	justify-content: left;
+	margin-top: 8rem;
+	margin-right: 0rem;
+    align-items: center;
+	
+}
+.tituescu{
+	margin-top: 2rem;
+	margin-left: 4rem;
+}
+.cajaescu{
+	background-color:var(--black-text);
+	border-radius: 3.5rem;/*borde de la caja*/
+	box-shadow: 0 0.5rem 2rem  rgba(23, 201, 255, 0.8);
+	background: white;
+	display: flex;	
+	margin: 2rem;
+	overflow: hidden;
+	margin-top: -5rem;
+	width: 55rem;/*ancho*/
+	height: 32rem;/*largo*/
+}
+.col-xl-10{
+	margin-left: 1rem;
+	margin-top: 3rem;
+}
+.col-auto{
+	margin-left: 16rem;
+	margin-top: -2.4rem;
+}
+.button{
+   margin-left: 22rem;
+   margin-top: -2.4rem;
+}
+.cajasescu{/*ESTA ES LA CAJA DONDE SE VEN LOS DATOS REGISTRADOS*/
+	margin-top: 6rem;
+	margin-left: -60rem;
+	display: flex;
+	overflow: hidden;
+	border-radius: 0rem;/*borde de la caja*/
+	/*para ver el margen que abarca el cuadro*/
+	/* box-shadow: 0 0.5rem 2rem  rgba(0, 0, 0, 0.8);  */
+	width: 45rem;/*ancho*/
+	height: 20rem;/*largo*/
+	overflow: scroll;
+}
+.botonescu{/*aqui va el boton de agregar datos*/
+	margin-top: 28rem;
+	margin-left: -8rem;
+}
+/*aqui viene el logo de la iglesia en escuela*/
+.contenido5{
+	display: flex;
+	justify-content: right;
+	margin-top: -32rem;
+	margin-right: 1rem;
+    align-items: center;
+}
+.cajalogo5{
+	background-color:var(--black-text);
+	border-radius: 1.5rem;/*borde de la caja*/
+	/*box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);/*para darle el efecto de sombra a la caja */
+	display: flex;	
+	margin: 0.5rem;
+	overflow: hidden;
+	width: 18rem;/*ancho*/
+	height: 23rem;/*largo*/
+}
+.pddf4{/*aqui es el pdf*/
+	margin-top: 28rem;
+	margin-left: -10rem;
+}
+.boton-con-imagen img{
+	width: 15rem; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: 15rem; /* Ajusta la altura de la imagen según tus necesidades */
+    margin-right: 4px; /* Espacio entre la imagen y el texto (o*/
+}
+/*aqui acaba*/
+
+/*aqui viene el encuentro*/
+.conteiner_encu{
+	display: flex;
+	justify-content: left;
+	margin-top: 8rem;
+	margin-right: 0rem;
+    align-items: center;
+	
+}
+.tituencu{
+	margin-top: 2rem;
+	margin-left: 4rem;
+	
+	height: 3.5rem;/*largo*/
+	
+}
+.cajaencu{
+	background-color:var(--black-text);
+	border-radius: 3.5rem;/*borde de la caja*/
+	box-shadow: 0 0.5rem 2rem  rgba(23, 201, 255, 0.8);
+	background: white;
+	display: flex;	
+	margin: 2rem;
+	overflow: hidden;
+	margin-top: -5rem;
+	width: 58rem;/*ancho*/
+	height: 32rem;/*largo*/
+}
+.cajasencu{/*ESTA ES LA CAJA DONDE SE VEN LOS DATOS REGISTRADOS*/
+	margin-top: 6rem;
+	margin-left: -50rem;
+	display: flex;
+	overflow: hidden;
+	border-radius: 0rem;/*borde de la caja*/
+	/*para ver el margen que abarca el cuadro*/
+	/* box-shadow: 0 0.5rem 2rem  rgba(0, 0, 0, 0.8);  */
+	width: 51rem;/*ancho*/
+	height: 20rem;/*largo*/
+	overflow: scroll;
+}
+.pddf3{/*aqui es el pdf*/
+	margin-top: 28rem;
+	margin-left: -10rem;
+}
+.botonencu{/*aqui va el boton de agregar datos*/
+	margin-top: 28rem;
+	margin-left: -8rem;
+	
+	height: 3rem;/*largo*/
+}
+.col-xl-10{
+	margin-left: 0.5rem;
+	margin-top: 3rem;
+	
+}
+.col-auto{
+	margin-left: 14rem;
+	margin-top: -2.4rem;
+	
+}
+.button{
+   margin-left: 19rem;
+   margin-top: -2.4rem;
+}
+/*aqui viene el logo de la iglesia en encuentro*/
+.contenido4{
+	display: flex;
+	justify-content: right;
+	margin-top: -31rem;
+	margin-right: 1rem;
+    align-items: center;
+}
+.cajalogo4{
+	background-color:var(--black-text);
+	border-radius: 1.5rem;/*borde de la caja*/
+	/*box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);/*para darle el efecto de sombra a la caja */
+	display: flex;	
+	margin: 0.5rem;
+	overflow: hidden;
+	width: 17rem;/*ancho*/
+	height: 22rem;/*largo*/
 }

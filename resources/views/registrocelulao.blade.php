@@ -10,10 +10,13 @@
               <a class="nav-link" href="{{url('registrocelulao')}}">CELULAS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">BAUTIZADOS</a>
+              <a class="nav-link" href="{{url('bautizados')}}">BAUTIZADOS</a>
+            </li>
+            <li>
+              <a class="nav-link" href="{{url('encuentro')}}">ENCUENTRO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">ESCUELA DE LIDERES</a>
+              <a class="nav-link" href="{{url('escuela')}}">ESCUELA DE LIDERES</a>
             </li>
           </ul>
         </div>
@@ -44,6 +47,7 @@
                   <thead>
                       <th>N°</th>
                       <th>LIDER DE CELULA</th>
+                      <th>ASISTENTE</th>
                       <th>Nº DE CELULA</th>
                       <th>DIRECCION</th>
                       <th>HORA</th>
@@ -56,16 +60,17 @@
                         <tr>
                           <td>{{$item->id}}</td>
                           <td>{{$item->lider_celu}}</td>
+                          <td>{{$item->asistente}}</td>
                           <td>{{$item->numero_celu}}</td>
                           <td>{{$item->direccion}}</td>
-                          <td></td>
+                          <td>{{$item->hora}}</td>
                           <td>{{$item->estado}}</td>
                           <td>
-                            <form action="" method="GET">
-                                <button class="btn btn-outline-success">
+                            <a href="{{route('prueba.show',1)}}">
+                                <button type="submit" class="btn btn-primary">
                                     <span class="fa-solid fa-list"></span>
                                 </button>
-                            </form>
+                              </a>
                           </td>
                           <td>
                             <form action="" method="GET">
@@ -83,6 +88,11 @@
               <div class="botonagre">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Agregar</button>
               </div>
+              <div class="pddf">
+                <form action="{{route('pdfcelu')}}" method="GET">
+                  <input type="submit" class="btn btn-primary" value="Pdf">
+                </form>
+              </div>
             </div>
         </div>
     <!--aqui viene la ventana emergente para rellenar datos-->
@@ -98,10 +108,14 @@
               @csrf
               <label for="">Lider de Celula</label>
               <input type="text" name="lider_celu" class="form-control" required>
+              <label for="">Asistente</label>
+              <input type="text" name="asistente" class="form-control" required>
               <label for="">N° de Celula</label>
               <input type="text" name="numero_celu" class="form-control" required>
               <label for="">Dirección</label>
               <input type="text" name="direccion" class="form-control" required>
+              <label for="">Hora</label>
+              <input type="text" name="hora" class="form-control" required> 
               <label for="">Estado</label>
               <input type="text" name="estado" class="form-control" required> 
           </div>   
@@ -114,10 +128,10 @@
       </div>
     </div>
     <!--aqui viene el logo de la iglesia-->
-    <div class="contenido"><!--aqui vendra el logo de la iglesia-->
-      <div class="cajalogo">
+    <div class="contenido2"><!--aqui vendra el logo de la iglesia-->
+      <div class="cajalogo2">
         <a href="{{url('/inicio')}}">
-          <img src="logo.png" width="350rem" >
+          <img src="logo.png" width="290rem" >
         </a>
       </div>
     </div>
@@ -130,15 +144,20 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="{{ route('celula.update', 1) }}" method="POST">
+            <form action="{{ route('celula.update') }}" method="POST">
               @csrf
               @method("PUT")
+              <input type="hidden" name="id" id="input-id_celu" class="form-control" required value="">
               <label for="">Lider de Celula</label>
               <input type="text" name="lider_celu" id="input-lider_celu" class="form-control" required value="">
+              <label for="">Asistente</label>
+              <input type="text" name="asistente" id="input-asistente" class="form-control" required>
               <label for="">N° de Celula</label>
               <input type="text" name="numero_celu" id="input-numero_celu" class="form-control" required value="">
               <label for="">Dirección</label>
               <input type="text" name="direccion" id="input-direccion" class="form-control" required value="">
+              <label for="">Hora</label>
+              <input type="text" name="hora" id="input-hora" class="form-control" required value> 
               <label for="">Estado</label>
               <input type="text" name="estado" id="input-estado" class="form-control" required value=""> 
           </div>   
@@ -158,11 +177,15 @@
     $(document).ready(function(){
       $('.btn-editar').click(function(){
         let celula = $(this).data('celula');
+        $('#input-id_celu').val(celula.id)
         $('#input-lider_celu').val(celula.lider_celu)
+        $('#input-asistente').val(celula.asistente)
         $('#input-numero_celu').val(celula.numero_celu)
         $('#input-direccion').val(celula.direccion)
+        $('#input-hora').val(celula.hora)
         $('#input-estado').val(celula.estado)
       });
     });
   </script>
+  
 @endsection

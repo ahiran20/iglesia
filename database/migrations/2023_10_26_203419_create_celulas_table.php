@@ -16,8 +16,10 @@ class CreateCelulasTable extends Migration
         Schema::create('celulas', function (Blueprint $table) {
             $table->id();
             $table ->string('lider_celu');
-            $table ->string('numero_celu');
+            $table ->string('asistente');
+            $table ->integer('numero_celu');
             $table ->string('direccion');
+            $table ->time('hora');
             $table ->string('estado');
             $table->timestamps();
         });

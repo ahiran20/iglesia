@@ -10,6 +10,6 @@ class bautizo extends Model
     use HasFactory;
     //aqui seria categoria segun el video
     public function miembros(){
-        return $this->hasMany(miembro::class);
+        return $this->belongsTo(miembro::class,'id_miembro');
     }
 }
